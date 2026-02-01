@@ -5,7 +5,9 @@ import { motion } from 'framer-motion';
 import { Plane, CalendarClock, Building2, Truck, Award, Flower2, Download } from 'lucide-react';
 import catalogPreview from '@/assets/flowers-catalog-preview.png';
 
-const CATALOG_DIRECT_URL = "https://download1588.mediafire.com/qvunnvifx7ig90xjG3uF2EGBhSEvkIToAlTZkZTYwMAMpjcW9fIlb72B9BqVsQ2ovqC_EPkGuy6Wmkvgd--M-EzrkTr0AEN335sgo2_05pTiuGo_Bzv_K5f1RWDesQlsj5YWF6ARu9ShXTa5lQc67hHQk_tLqnMrPotvFL9ElP6f/488cgm2x4it6hit/DF%C2%A0%E2%80%94+Dec+31+2025+%E2%80%94+Wholesale+Catalog.pdf";
+// Upload your PDF to: public/catalogs/wholesale-catalog.pdf
+const CATALOG_FILENAME = "District-Flowers-Wholesale-Catalog.pdf";
+const CATALOG_PATH = "/catalogs/wholesale-catalog.pdf";
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -147,7 +149,7 @@ const Flowers = () => {
                 size="xl"
                 className="w-full sm:w-auto sm:min-w-[280px] gap-2 sm:gap-3 text-xs sm:text-sm md:text-base px-4 sm:px-6 py-3 sm:py-4 whitespace-normal text-center leading-tight"
               >
-                <a href={CATALOG_DIRECT_URL} download target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                <a href={CATALOG_PATH} download={CATALOG_FILENAME} className="flex items-center justify-center">
                   <Download className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
                   <span>Download the Full Catalogue for Latest Arrivals</span>
                 </a>
